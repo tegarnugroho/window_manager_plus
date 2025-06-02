@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.15)
-set(PROJECT_NAME "window_manager_plus")
+set(PROJECT_NAME "window_manager_plus_v2")
 project(${PROJECT_NAME} LANGUAGES CXX)
 
 # This value is used when generating builds using this plugin, so it must
 # not be changed
-set(PLUGIN_NAME "window_manager_plus_plugin")
+set(PLUGIN_NAME "window_manager_plus_v2_plugin")
 
 add_library(${PLUGIN_NAME} SHARED
-  "window_manager_plus.cpp"
-  "window_manager_plus.h"
-  "window_manager_plus_plugin.cpp"
+  "window_manager_plus_v2.cpp"
+  "window_manager_plus_v2.h"
+  "window_manager_plus_v2_plugin.cpp"
 )
 apply_standard_settings(${PLUGIN_NAME})
 set_target_properties(${PLUGIN_NAME} PROPERTIES

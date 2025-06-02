@@ -1,9 +1,9 @@
-#ifndef WINDOW_MANAGER_PLUS_PLUGIN_WINDOW_MANAGER_PLUS_H_
-#define WINDOW_MANAGER_PLUS_PLUGIN_WINDOW_MANAGER_PLUS_H_
+#ifndef window_manager_plus_v2_PLUGIN_window_manager_plus_v2_H_
+#define window_manager_plus_v2_PLUGIN_window_manager_plus_v2_H_
 
 #include <shobjidl_core.h>
 
-#include "include/window_manager_plus/window_manager_plus_plugin.h"
+#include "include/window_manager_plus_v2/window_manager_plus_v2_plugin.h"
 
 #include <flutter/method_channel.h>
 #include <flutter/plugin_registrar_windows.h>
@@ -21,7 +21,7 @@
 #define STATE_FULLSCREEN_ENTERED 3
 #define STATE_DOCKED 4
 
-namespace window_manager_plus {
+namespace window_manager_plus_v2 {
 
 class WindowManagerPlus {
  public:
@@ -149,6 +149,6 @@ class WindowManagerPlus {
                                                    PAPPBARDATA pabd);
   void WindowManagerPlus::DockAccessBar(HWND hwnd, UINT edge, UINT windowWidth);
 };
-}  // namespace window_manager_plus
+}  // namespace window_manager_plus_v2
 
-#endif  // WINDOW_MANAGER_PLUS_PLUGIN_WINDOW_MANAGER_PLUS_H_
+#endif  // window_manager_plus_v2_PLUGIN_window_manager_plus_v2_H_

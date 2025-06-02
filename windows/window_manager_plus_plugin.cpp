@@ -1,4 +1,4 @@
-#include "include/window_manager_plus/window_manager_plus_plugin.h"
+#include "include/window_manager_plus_v2/window_manager_plus_v2_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -15,9 +15,9 @@
 #include <sstream>
 #include <thread>
 
-#include "window_manager_plus.h"
+#include "window_manager_plus_v2.h"
 
-namespace window_manager_plus {
+namespace window_manager_plus_v2 {
 
 bool IsWindows11OrGreater() {
   DWORD dwVersion = 0;
@@ -112,7 +112,7 @@ WindowManagerPlusPlugin::WindowManagerPlusPlugin(
   window_manager = std::make_shared<WindowManagerPlus>();
   window_manager->static_channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          registrar->messenger(), "window_manager_plus_static",
+          registrar->messenger(), "window_manager_plus_v2_static",
           &flutter::StandardMethodCodec::GetInstance());
   window_manager->static_channel->SetMethodCallHandler(
       [](const auto& call, auto result) {
@@ -120,7 +120,7 @@ WindowManagerPlusPlugin::WindowManagerPlusPlugin(
       });
   window_manager->channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          registrar->messenger(), "window_manager_plus",
+          registrar->messenger(), "window_manager_plus_v2",
           &flutter::StandardMethodCodec::GetInstance());
   window_manager->channel->SetMethodCallHandler(
       [this](const auto& call, auto result) {
@@ -473,7 +473,7 @@ void WindowManagerPlusPlugin::HandleMethodCall(
       window_manager->channel =
           std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
               registrar->messenger(),
-              "window_manager_plus_" + std::to_string(windowId),
+              "window_manager_plus_v2_" + std::to_string(windowId),
               &flutter::StandardMethodCodec::GetInstance());
       window_manager->channel->SetMethodCallHandler(
           [this](const auto& call, auto result) {
@@ -700,11 +700,11 @@ void WindowManagerPlusPlugin::HandleMethodCall(
   }
 }
 
-}  // namespace window_manager_plus
+}  // namespace window_manager_plus_v2
 
 void WindowManagerPlusPluginRegisterWithRegistrar(
     FlutterDesktopPluginRegistrarRef registrar) {
-  window_manager_plus::WindowManagerPlusPlugin::RegisterWithRegistrar(
+  window_manager_plus_v2::WindowManagerPlusPlugin::RegisterWithRegistrar(
       flutter::PluginRegistrarManager::GetInstance()
           ->GetRegistrar<flutter::PluginRegistrarWindows>(registrar));
 }

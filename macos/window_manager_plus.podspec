@@ -3,7 +3,7 @@
 # Run `pod lib lint window_manager.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'window_manager_plus'
+  s.name             = 'window_manager_plus_v2'
   s.version          = '0.0.1'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC

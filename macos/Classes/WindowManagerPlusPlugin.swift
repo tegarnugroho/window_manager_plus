@@ -23,10 +23,10 @@ public class WindowManagerPlusPlugin: NSObject, FlutterPlugin {
         super.init()
         self.registrar = registrar
         
-        windowManager.staticChannel = FlutterMethodChannel(name: "window_manager_plus_static", binaryMessenger: registrar.messenger)
+        windowManager.staticChannel = FlutterMethodChannel(name: "window_manager_plus_v2_static", binaryMessenger: registrar.messenger)
         windowManager.staticChannel?.setMethodCallHandler(staticHandle)
         
-        windowManager.channel = FlutterMethodChannel(name: "window_manager_plus", binaryMessenger: registrar.messenger)
+        windowManager.channel = FlutterMethodChannel(name: "window_manager_plus_v2", binaryMessenger: registrar.messenger)
         windowManager.channel?.setMethodCallHandler(handle)
     }
     
@@ -36,7 +36,7 @@ public class WindowManagerPlusPlugin: NSObject, FlutterPlugin {
             windowManager.mainWindow = mainWindow
             
             windowManager.channel?.setMethodCallHandler(nil)
-            windowManager.channel = FlutterMethodChannel(name: "window_manager_plus_\(windowManager.id)", binaryMessenger: registrar.messenger)
+            windowManager.channel = FlutterMethodChannel(name: "window_manager_plus_v2_\(windowManager.id)", binaryMessenger: registrar.messenger)
             windowManager.channel?.setMethodCallHandler(handle)
             
             WindowManagerPlus.windowManagers[windowId] = windowManager

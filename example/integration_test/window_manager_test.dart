@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:window_manager_plus/window_manager_plus.dart';
+import 'package:window_manager_plus_v2/window_manager_plus_v2.dart';
 
 Future<void> main(List<String> args) async {
   if (kDebugMode) {

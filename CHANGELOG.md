@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Fix _No implementation found for the method ensureInitialized_ when performing a hot restart. [15](https://github.com/pichillilorenzo/window_manager_plus/issues/15#issuecomment-2928841747) Thanks to [mchangtian](https://github.com/mchangtian)
+
 ## 1.0.5
 
 - Updated README

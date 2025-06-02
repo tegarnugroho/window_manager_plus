@@ -1,6 +1,6 @@
-# window_manager_plus_example
+# window_manager_plus_v2_example
 
-Demonstrates how to use the window_manager_plus plugin.
+Demonstrates how to use the window_manager_plus_v2 plugin.
 
 ## Getting Started
 

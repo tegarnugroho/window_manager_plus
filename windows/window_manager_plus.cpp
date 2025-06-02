@@ -13,7 +13,7 @@
 #include <memory>
 #include <sstream>
 
-#include "window_manager_plus.h"
+#include "window_manager_plus_v2.h"
 
 #include <algorithm>
 
@@ -45,7 +45,7 @@ constexpr const wchar_t kGetPreferredBrightnessRegValue[] =
 
 #define APPBAR_CALLBACK WM_USER + 0x01;
 
-namespace window_manager_plus {
+namespace window_manager_plus_v2 {
 
 WindowManagerPlusPluginWindowCreatedCallback g_window_created_callback =
     nullptr;
@@ -1018,9 +1018,9 @@ void WindowManagerPlus::StartResizing(const flutter::EncodableMap& args) {
               MAKELPARAM(cursorPos.x, cursorPos.y));
 }
 
-}  // namespace window_manager_plus
+}  // namespace window_manager_plus_v2
 
 void WindowManagerPlusPluginSetWindowCreatedCallback(
     WindowManagerPlusPluginWindowCreatedCallback callback) {
-  window_manager_plus::g_window_created_callback = callback;
+  window_manager_plus_v2::g_window_created_callback = callback;
 }
