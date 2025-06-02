@@ -3,7 +3,7 @@
 
 #include <shobjidl_core.h>
 
-#include "include/window_manager_plus_v2/window_manager_plus_v2_plugin.h"
+#include "include/window_manager_plus_v2/window_manager_plus_plugin.h"
 
 #include <flutter/method_channel.h>
 #include <flutter/plugin_registrar_windows.h>

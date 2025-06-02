@@ -1,5 +1,5 @@
-#ifndef FLUTTER_PLUGIN_window_manager_plus_v2_PLUGIN_H_
-#define FLUTTER_PLUGIN_window_manager_plus_v2_PLUGIN_H_
+#ifndef FLUTTER_PLUGIN_WINDOW_MANAGER_PLUS_PLUGIN_H_
+#define FLUTTER_PLUGIN_WINDOW_MANAGER_PLUS_PLUGIN_H_
 
 #include <any>
 #include <map>

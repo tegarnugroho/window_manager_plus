@@ -1,4 +1,10 @@
+
+## 1.0.9
+
+- fix failed running on windows devices
+
 ## 1.0.8
+
 - fix No SOURCES given to target: window_manager_plus_v2_plugin
 
 ## 1.0.7

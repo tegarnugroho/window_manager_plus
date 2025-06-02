@@ -7,7 +7,7 @@
 #include "flutter_window.h"
 #include "utils.h"
 
-#include "window_manager_plus_v2/window_manager_plus_v2_plugin.h"
+#include "window_manager_plus_v2/window_manager_plus_plugin.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE instance,
                       _In_opt_ HINSTANCE prev,

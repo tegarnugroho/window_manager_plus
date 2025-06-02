@@ -1,4 +1,4 @@
-#include "include/window_manager_plus_v2/window_manager_plus_v2_plugin.h"
+#include "include/window_manager_plus_v2/window_manager_plus_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
