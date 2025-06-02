@@ -455,13 +455,21 @@ void WindowManagerPlusPlugin::HandleMethodCall(
 
   if (method_name.compare("ensureInitialized") == 0) {
     if (windowId >= 0) {
+      // if exist manager，bug channel is invalid，clear old state
+      auto it = WindowManagerPlus::windowManagers_.find(windowId);
+      if (it != WindowManagerPlus::windowManagers_.end()) {
+        auto existing_manager = it->second;
+        if (existing_manager->channel) {
+          existing_manager->channel->SetMethodCallHandler(nullptr);
+          existing_manager->channel.reset(); // clear old channel
+        }
+      }
+
       window_manager->id = windowId;
       window_manager->native_window =
           ::GetAncestor(registrar->GetView()->GetNativeWindow(), GA_ROOT);
 
-      if (window_manager->channel) {
-        window_manager->channel->SetMethodCallHandler(nullptr);
-      }
+      // create new channel
       window_manager->channel =
           std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
               registrar->messenger(),
