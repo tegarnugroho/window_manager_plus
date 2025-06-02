@@ -1,3 +1,6 @@
+## 1.0.8
+- fix No SOURCES given to target: window_manager_plus_v2_plugin
+
 ## 1.0.7
 
 - Fix _No implementation found for the method ensureInitialized_ when performing a hot restart. [15](https://github.com/pichillilorenzo/window_manager_plus/issues/15#issuecomment-2928841747) Thanks to [mchangtian](https://github.com/mchangtian)

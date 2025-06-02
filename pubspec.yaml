@@ -1,6 +1,6 @@
 name: window_manager_plus_v2
 description: A fork of window_manager_plus with bug fixes and improvements. Allows Flutter desktop apps to manage multiple windows, resize, reposition, and communicate between them.
-version: 1.0.7
+version: 1.0.8
 homepage: https://github.com/pichillilorenzo/window_manager_plus
 repository: https://github.com/pichillilorenzo/window_manager_plus
 issue_tracker: https://github.com/pichillilorenzo/window_manager_plus/issues
